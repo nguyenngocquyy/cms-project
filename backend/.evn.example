@@ -1,0 +1,8 @@
+APP_NAME=CMS Backend API
+APP_HOST=0.0.0.0
+APP_PORT=8000
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=cmsdb
+DB_USER=postgres
+DB_PASSWORD=postgres
