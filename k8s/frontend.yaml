@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cms-frontend
+  namespace: cms
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cms-frontend
+  template:
+    metadata:
+      labels:
+        app: cms-frontend
+    spec:
+      containers:
+        - name: cms-frontend
+          image: 919664459382.dkr.ecr.ap-southeast-1.amazonaws.com/cms-frontend:latest
+          ports:
+            - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cms-frontend-service
+  namespace: cms
+spec:
+  selector:
+    app: cms-frontend
+  ports:
+    - port: 80
+      targetPort: 80
+  type: ClusterIP
