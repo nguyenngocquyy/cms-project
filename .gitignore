@@ -1,8 +1,17 @@
-node_modules/
-venv/
+
+# Terraform
+terraform/.terraform/
+terraform/.terraform.lock.hcl
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
+terraform/*.tfstate
+terraform/*.tfstate.backup
+
+# frontend env
+frontend/.env
+# Python
+backend/.env
+backend/venv/
+backend/app/__pycache__/
+*.pyc
 __pycache__/
-.env
-dist/
-build/
-coverage/
-.DS_Store

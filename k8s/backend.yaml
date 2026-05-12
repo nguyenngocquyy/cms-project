@@ -44,6 +44,16 @@ spec:
                 secretKeyRef:
                   name: cms-backend-secret
                   key: DB_PASSWORD
+            - name: WEATHER_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: cms-backend-secret
+                  key: WEATHER_API_KEY
+            - name: WEATHER_API_URL
+              valueFrom:
+                secretKeyRef:
+                  name: cms-backend-secret
+                  key: WEATHER_API_URL
 ---
 apiVersion: v1
 kind: Service
@@ -54,6 +64,8 @@ spec:
   selector:
     app: cms-backend
   ports:
-    - port: 8000
+    - protocol: TCP
+      port: 8000
       targetPort: 8000
-  type: ClusterIP
+      nodePort: 31780
+  type: NodePort
