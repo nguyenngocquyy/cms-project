@@ -1,4 +1,5 @@
 # CMS 3-Tier on AWS EKS
+http://ec2-13-229-83-174.ap-southeast-1.compute.amazonaws.com:8080/ link jenkins
 
 ## Overview
 This project deploys a 3-tier CMS application on AWS using EKS, ECR, RDS, GitHub Actions, ALB Ingress, and ACM.

@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: cms-backend
-          image: 919664459382.dkr.ecr.ap-southeast-1.amazonaws.com/cms-backend:latest
+          image: 154931139523.dkr.ecr.ap-southeast-1.amazonaws.com/cms-backend-tf:latest
           ports:
             - containerPort: 8000
           env:

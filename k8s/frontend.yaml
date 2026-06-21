@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: cms-frontend
-          image: 919664459382.dkr.ecr.ap-southeast-1.amazonaws.com/cms-frontend:latest
+          image: 154931139523.dkr.ecr.ap-southeast-1.amazonaws.com/cms-frontend-tf:latest
           ports:
             - containerPort: 80
 ---
